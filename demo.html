@@ -90,7 +90,8 @@
     <script type="text/javascript">
           angular.module('imageuploadDemo', ['imageupload'])
             .controller('DemoCtrl', function($scope, $http) {
-                $scope.single = function(image) {
+                $scope.single = function(imageObj) {
+                    var image = imageObj.file;
                     var formData = new FormData();
                     formData.append('image', image, image.name);
 
